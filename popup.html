@@ -1,0 +1,880 @@
+<html>
+<!-- 与我们来联系部分尚未改完 -->
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/progressbar.js"></script>
+        
+        <style>
+			#div_setup {
+                border: none;
+                display:contents
+            }
+            
+			#div_cloth {
+                border: none;
+                display:contents
+
+            }
+			#div_email {
+                border: none;
+                display:contents
+                
+            }
+			#div_setup img{
+				position: absolute;
+				left: 220px;
+				top: 5px;
+			}
+			
+			#div_cloth img{
+				position: absolute;
+				left: 270px;
+				top: 5px;
+			}
+
+			#div_email img{
+				position: absolute;
+				left: 320px;
+				top: 5px;
+			}
+            
+            #adduse {
+                display: none;
+                width: 370px;
+                height: 360px; 
+                background: #fae39b;
+                position: absolute;
+				left: 0px;
+				top: 0px;
+				box-sizing: border-box;
+            }
+            
+            #adduse p {
+                padding-left: 15px;
+            }
+            
+            .addusep {
+                background: #fae39b;
+				display: block;
+				width: 370px;
+                height: 50px;
+				
+                /* line-height: 30px;
+                padding-left: 5px; */
+            }
+            
+			.asdf p:nth-child(1) {
+                /* padding-top: 25px; */
+				font-size: 40px;
+				font-weight: 800;
+				font-family: "等线";
+				color: #211102;
+				position: absolute;
+				top: 70px;
+				left: 30px;
+            }
+
+            #adduse p:nth-child(2) {
+                /* padding-top: 25px; */
+				font-size: 25px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+				position: absolute;
+				top: 150px;
+				left: 30px;
+				
+            }
+
+			#adduse p:nth-child(3) {
+                font-size: 25px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+				position: absolute;
+				top: 200px;
+				left: 30px;
+            }
+            
+            #adduse p:nth-child(4) {
+                font-size: 25px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+				position: absolute;
+				top: 250px;
+				left: 30px;
+            }
+            
+            #jump {
+                margin-right: 36px;
+                background: #fae39b;
+                color: #484343;
+                border: none;
+				text-decoration: underline;
+				position:absolute;
+				bottom: 10px;
+				left:190px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#school {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+                background: #fbfbf3;
+                border: none;
+				position:absolute;
+				right:18%;
+				top: 25px;
+                /* width: 60px;
+                height: 30px; */
+            }
+			
+			#shut_school {
+                border: none;
+                display:contents;
+				
+            }
+
+			#shut_school img {
+				position:absolute;
+				right:81%;
+				top: 8px;
+			}
+
+			#shut_time {
+                border: none;
+                display:contents;
+				
+            }
+
+			#shut_time img {
+				position:absolute;
+				right:81%;
+				top: 8px;
+			}
+
+			#shut_email {
+                border: none;
+                display:contents;
+				
+            }
+
+			#shut_email img {
+				position:absolute;
+				right:81%;
+				top: 8px;
+			}
+
+            #shut_text {
+                border: none;
+                display:contents;
+				
+            }
+
+            #shut_text img {
+				position:absolute;
+				right:6%;
+				top: 5px;
+			}
+
+			#work {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+                background: #fbfbf3;
+                border: none;
+				position:absolute;
+				right:18%;
+				top: 65px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#else {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+                background: #fbfbf3;
+                border: none;
+				position:absolute;
+				right:18%;
+				top: 105px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#day {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+                background: #fbfbf3;
+                border: none;
+				position:absolute;
+				right:15%;
+				top: 25px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#night {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+                background: #fbfbf3;
+                border: none;
+				position:absolute;
+				right:15%;
+				top: 65px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#contactus {
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #211102;
+                background: #fbfbf3;
+                border: none;
+				text-decoration: underline;
+				position:absolute;
+				right:5%;
+				top: 18px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#setup {
+                
+                background: #fbfbf3;
+                color: #484343;
+                border: none;
+				text-decoration: underline;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#modelchoose {
+                display: none;
+                width: 140px;
+                height: 160px; 
+                border: 1px solid #c97940;
+                background: #fbfbf3;
+                position: absolute;
+				left:15%;
+				top: 50px;
+				box-sizing: border-box;
+                z-index: 1;
+            }
+
+			.modelchoosep {
+                background: #fbfbf3;
+				display: none;
+				width: 170px;
+                height: 50px;
+				
+                /* line-height: 30px;
+                padding-left: 5px; */
+            }
+
+			#timechoose {
+                display: none;
+                width: 140px;
+                height: 120px; 
+                border: 1px solid #c97940;
+                background: #fbfbf3;
+                position: absolute;
+				left: 20%;
+				top: 50px;
+				box-sizing: border-box;
+                z-index: 1;
+            }
+
+			#contact {
+                display: none;
+                width: 140px;
+                height: 60px; 
+                border: 1px solid #c97940;
+                background: #fbfbf3;
+                position: absolute;
+				left: 22%;
+				top: 50px;
+				box-sizing: border-box;
+                z-index: 1;
+            }
+
+            #extensive {
+                display: none;
+                width: 330px;
+                height: 360px; 
+                background: #ffffff;
+                position: absolute;
+				left: 370px;
+				top: 0px;
+				box-sizing: border-box;
+                border-style: solid;
+                border-color: #fae39b;
+                
+            }
+
+            #text {
+                width: 300px;
+                height: 300px; 
+                background: #ffffff;
+                color: #1d1a1a;
+                border: none;
+                position: absolute;
+				right: 15px;
+				top: 30px;
+                
+                
+            }
+
+            #ok {
+                font-size: 15px;
+                font-weight: 400;
+                font-family: "等线";
+                color: #000000;
+                background: #ffffff;
+                border: none;
+                position:absolute;
+                right:5%;
+                top: 331px;
+            }
+
+			/* -------------------------------------------夜间---------------------------------------------------- */
+            
+			#div_add2 {
+                border: none;
+                display: contents;
+                height: 30px;
+                margin: 20px 0;
+            }
+
+			#div_setup2 {
+                border: none;
+                display:contents
+            }
+            
+			#div_cloth2 {
+                border: none;
+                display:contents
+
+            }
+			#div_email2 {
+                border: none;
+                display:contents
+                
+            }
+			#div_setup2 img{
+				position: absolute;
+				left: 230px;
+				top: 5px;
+			}
+			
+			#div_cloth2 img{
+				position: absolute;
+				left: 275px;
+				top: 5px;
+			}
+
+			#div_email2 img{
+				position: absolute;
+				left: 320px;
+				top: 5px;
+			}
+
+            
+            #adduse2 {
+                display: none;
+                width: 370px;
+                height: 360px; 
+                /* border: 1px solid #c0c0c0; */
+                background: #000000;
+                position: absolute;
+				left: 0px;
+				top: 0px;
+				box-sizing: border-box;
+            }
+            
+            #adduse2 p {
+                padding-left: 15px;
+            }
+            
+            .addusep2 {
+                background: #000000;
+				display: block;
+				width: 370px;
+                height: 50px;
+				
+                /* line-height: 30px;
+                padding-left: 5px; */
+            }
+            
+			.asdf2 p:nth-child(1) {
+                /* padding-top: 25px; */
+				font-size: 40px;
+				font-weight: 800;
+				font-family: "等线";
+				color: #ffffff;
+				position: absolute;
+				top: 70px;
+				left: 30px;
+            }
+
+            #adduse2 p:nth-child(2) {
+                /* padding-top: 25px; */
+				font-size: 25px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #ffffff;
+				position: absolute;
+				top: 150px;
+				left: 30px;
+				
+            }
+
+			#adduse2 p:nth-child(3) {
+                font-size: 25px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #ffffff;
+				position: absolute;
+				top: 200px;
+				left: 30px;
+            }
+            
+            #adduse2 p:nth-child(4) {
+                font-size: 25px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #ffffff;
+				position: absolute;
+				top: 250px;
+				left: 30px;
+            }
+            
+            #jump2 {
+                margin-right: 36px;
+                background: #000;
+                color: #8a8484;
+                border: none;
+				text-decoration: underline;
+				position:absolute;
+				bottom: 10px;
+				left: 190px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#school2 {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #ffffff;
+                background: #b2b6bf;
+                border: none;
+				position:absolute;
+				right:18%;
+				top: 25px;
+                /* width: 60px;
+                height: 30px; */
+            }
+			
+			#shut_school2 {
+                border: none;
+                display:contents;
+				
+            }
+
+			#shut_school2 img {
+				position:absolute;
+				right:85%;
+				top: 8px;
+			}
+
+			#shut_time2 {
+                border: none;
+                display:contents;
+				
+            }
+
+			#shut_time2 img {
+				position:absolute;
+				right:85%;
+				top: 8px;
+			}
+
+			#shut_email2 {
+                border: none;
+                display:contents;
+				
+            }
+
+			#shut_email2 img {
+				position:absolute;
+				right:85%;
+				top: 8px;
+			}
+
+            #shut_text2 {
+                border: none;
+                display:contents;
+				
+            }
+
+            #shut_text2 img {
+				position:absolute;
+                right:6%;
+				top: 5px;
+			}
+
+			#work2 {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #ffffff;
+                background: #b2b6bf;
+                border: none;
+				position:absolute;
+				right:18%;
+				top: 65px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#else2 {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #ffffff;
+                background: #b2b6bf;
+                border: none;
+				position:absolute;
+				right:18%;
+				top: 105px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#day2 {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+				color: #ffffff;
+                background: #b2b6bf;
+                border: none;
+				position:absolute;
+				right:15%;
+				top: 25px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#night2 {
+                /* margin-right: 36px; */
+				font-size: 20px;
+				font-weight: 400;
+				color: #ffffff;
+                background: #b2b6bf;
+                border: none;
+				position:absolute;
+				right:15%;
+				top: 65px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#contactus2 {
+				font-size: 20px;
+				font-weight: 400;
+				font-family: "等线";
+                color: #ffffff;
+                background: #b2b6bf;
+                border: none;
+				text-decoration: underline;
+				position:absolute;
+				right:5%;
+				top: 18px;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#setup2 {
+                
+                background: #fbfbf3;
+                color: #484343;
+                border: none;
+				text-decoration: underline;
+                /* width: 60px;
+                height: 30px; */
+            }
+
+			#modelchoose2 {
+                display: none;
+                width: 140px;
+                height: 160px; 
+                border: 1px solid #363432;
+                background: #b2b6bf;
+                position: absolute;
+				left: 15%;
+				top: 50px;
+				box-sizing: border-box;
+                z-index: 1;
+            }
+
+			.modelchoosep2 {
+                background: #b2b6bf;
+				display: none;
+				width: 170px;
+                height: 50px;
+				
+                /* line-height: 30px;
+                padding-left: 5px; */
+            }
+
+			#timechoose2 {
+                display: none;
+                width: 140px;
+                height: 120px; 
+                border: 1px solid #363432;
+                background: #b2b6bf;
+                position: absolute;
+				left: 20%;
+				top: 50px;
+				box-sizing: border-box;
+                z-index: 1;
+            }
+
+			#contact2 {
+                display: none;
+                width: 140px;
+                height: 60px; 
+                border: 1px solid #363432;
+                background: #b2b6bf;
+                position: absolute;
+				left: 22%;
+				top: 50px;
+				box-sizing: border-box;
+                z-index: 1;
+            }
+
+            #extensive2 {
+                display: none;
+                width: 330px;
+                height: 360px; 
+                background: #d0cece;
+                position: absolute;
+				left: 370px;
+				top: 0px;
+				box-sizing: border-box;
+                border-style: solid;
+                border-color: #000000;
+            }
+
+            #text2 {
+                width: 300px;
+                height: 300px; 
+                background: #d0cece;
+                color: #1d1a1a;
+                border: none;
+                position: relative;
+				left: 15px;
+                top:30px;
+            }
+            #ok2 {
+                font-size: 15px;
+                font-weight: 400;
+                font-family: "等线";
+                color: #000000;
+                background: #d0cece;
+                border: none;
+                position:absolute;
+                right:5%;
+                top: 331px;
+            }
+            
+            #container {
+                margin: 20px;
+                width: 200px;
+                height: 15px;
+            }
+            
+            progress{
+                width: 150px;
+                height: 25px;
+                color:rgb(7, 151, 247);;
+                border-radius:1rem;
+                border: solid 1px #ccc6c2;
+            }
+            /* 表示总长度背景色 */
+            progress::-webkit-progress-bar{     
+            background-color:#ccc6c2;
+            border-radius:1rem;
+            }
+            /* 表示已完成进度背景色 */
+            progress::-webkit-progress-value{
+            background-color:#ffd900;
+            border-radius:1rem;
+            }
+
+
+            input::-webkit-input-placeholder{position:relative;top: -120px;}
+
+        </style>
+    </head>
+
+    <body style="height: 360;width: 700;">
+
+        <!--添加界面-->
+        <form id="adduse">
+            <p class="addusep">
+                <!-- <button type="button" id="div_setup"><img src="./setup.png" alt="123456" height="40" ></button> -->
+                <button type="button" id="div_setup"><img src="image/modified_set.png" alt="123456" height="40"></button>
+                <button type="button" id="div_cloth"><img src="image/modified_cloth.jpg" alt="123456" height="40"></button>
+                <button type="button" id="div_email"><img src="image/modified_logo.jpg" alt="123456" height="40"></button>
+            </p>
+            <div class="asdf">
+
+                <div><p id="MyPEmotion">
+                    客观
+                </p>
+                <p style="position: absolute;top: 75px;left: 115px;"><img id="emoji" src="rsc/emoji/loading.png"></p>
+                </div>
+                <p>
+                    情感强度
+                    <progress id="progress1" value="0.0" max="2.0"></progress>
+                </p>
+                <p>
+                    信息密度
+                    <progress id="progress2" value="0.0" max="1.0"></progress>
+                </p>
+                <p>
+                    平均句长
+                    <progress id="progress3" value="0" max="50"></progress>
+                </p>
+
+                <button id="jump" type="button">我不是这个意思...</button>
+            
+            </div>
+            
+        </form>
+
+        <form id="modelchoose">
+        
+            <input type="button" value="学校模式" id="school"/>
+            <input type="button" value="工作模式" id="work"/>
+            <input type="button" value="其他模式" id="else"/>
+            <button id="shut_school" type="button"><img src="image/return.png" alt="123456" height="25"></button>
+            
+        
+        </form>
+
+        <form id="timechoose">
+            <button id="day" type="button">白天模式</button>
+            <button id="night" type="button">夜晚模式</button>
+            <button id="shut_time" type="button"><img src="image/return.png" alt="123456" height="25"></button>
+        </form>
+        
+        <!-- <form id="contact">
+            <a href="./contact.html" id="contactus" target="_blank">contact us...</a>
+            <button onclick="emailShut()" id="shut_email" type="button"><img src="./return.png" alt="123456" height="25"></button>
+
+        </form> -->
+
+        <form id="extensive">
+            <textarea name="text" id="text" placeholder="请输入文本..." wrap="virtual"></textarea>
+            <button id="shut_text" type="button"><img src="image/modified_close.png" alt="123456" height="25"></button>
+            <input type="button" value="确认" id="ok"/>
+        </form>
+
+
+
+        <!-- ---------------------------------------------夜间------------------------------------------------- -->
+        <!--添加界面-->
+        <form id="adduse2">
+            <p class="addusep2">
+                <!-- <button type="button" id="div_setup"><img src="./setup.png" alt="123456" height="40" ></button> -->
+                <button type="button" id="div_setup2"><img src="image/modified_set2.png" alt="123456" height="40"></button>
+                <button type="button" id="div_cloth2"><img src="image/modified_cloth2.jpg" alt="123456" height="40"></button>
+                <button type="button" id="div_email2"><img src="image/modified_logo2.jpg" alt="123456" height="40"></button>
+            </p>
+            <div class="asdf2">
+
+                <div><p id="MyPEmotion2">
+                    客观
+                </p>
+                <p style="position: absolute;top: 75px;left: 115px;"><img id="emoji2" src="rsc/emoji/loading.png"></p>
+                </div>
+                <p>
+                    情感强度
+                    <progress id="progress4" value="0.0" max="2.0"></progress>
+                </p>
+                <p>
+                    信息密度
+                    <progress id="progress5" value="0.0" max="1.0"></progress>
+                </p>
+                <p>
+                    平均句长
+                    <progress id="progress6" value="0" max="50"></progress>
+                </p>
+
+                <button id="jump2" type="button">我不是这个意思...</button>
+            
+            </div>
+            
+        </form>
+
+        <form id="modelchoose2">
+        
+            <input type="button" value="学校模式" id="school2"/>
+            <input type="button" value="工作模式" id="work2"/>
+            <input type="button" value="其他模式" id="else2"/>
+            <button id="shut_school2" type="button"><img src="image/return2.png" alt="123456" height="21"></button>
+            
+        
+        </form>
+
+        <form id="timechoose2">
+            <button id="day2" type="button">白天模式</button>
+            <button id="night2" type="button">夜晚模式</button>
+            <button id="shut_time2" type="button"><img src="image/return2.png" alt="123456" height="21"></button>
+        </form>
+        
+        <!-- <form id="contact2">
+            <a href="./contact.html" id="contactus2" target="_blank">contact us...</a>
+            <button onclick="emailShut2()" id="shut_email2" type="button"><img src="./return2.png" alt="123456" height="21"></button>
+
+        </form> -->
+
+        
+        <form id="extensive2">
+            <textarea name="text2" id="text2" placeholder="请输入文本..." wrap="virtual"></textarea>
+            <button id="shut_text2" type="button"><img src="image/modified_close2.png" alt="123456" height="25"></button>
+            <input type="button" value="确认" id="ok2"/>
+        </form>
+        <script src="js/popup.js"></script>
+        <!-- <script>document.getElementById("emojiPng").innerHTML = "<img id=\"emojiPng\" src=\"rsc/emoji/angry-5.png\" alt=\"123456\" />"</script> -->
+    </body>
+</html>

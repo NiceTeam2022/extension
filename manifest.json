@@ -1,0 +1,40 @@
+{
+  "name": "等等",
+  "description": "情感分析助手",
+  "version": "0.0.1",
+  "icons": { "16": "image/logo16x16.png",
+           "48": "image/logo48x48.png",
+          "128": "image/logo128x128.png" },
+  "permissions": [
+    "tabs",
+    "storage",
+    "webNavigation",
+    "notifications",
+    "activeTab",
+    "cookies",
+    "<all_urls>",
+    "https://*/*",
+    "https://*/*/*",
+    "https://*/*/*/*"
+  ],
+  "background": {
+    "scripts": ["js/jquery-3.6.1.min.js","js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>","https://*/*","http://*/*/*","http://*/*/*/*"], 
+      "js": ["js/jquery-3.6.1.min.js","js/script.js"]
+    }
+  ],
+  
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://sapi.k780.com/; object-src 'self'",
+  "browser_action": {
+    "default_icon": "image/logo16x16.png",
+    "default_title": "hello",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": ["rsc/emoji/*.png","contact.html"],
+  "update_url": "http://www.google.com/"
+}
+
